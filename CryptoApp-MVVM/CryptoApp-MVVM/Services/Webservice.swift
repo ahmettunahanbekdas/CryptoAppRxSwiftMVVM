@@ -61,8 +61,5 @@ class Webservice {
 
 
 
-// try araştır
-// self araştır
-// if let ve guard let bak
 
 

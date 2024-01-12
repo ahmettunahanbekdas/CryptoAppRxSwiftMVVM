@@ -11,3 +11,8 @@ struct Crypto: Codable {
     let currency: String
     let price: String
 }
+
+enum CryptoError: Error {
+    case serverError
+    case parsingError
+}

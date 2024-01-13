@@ -32,7 +32,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - setupBinding()
     private func setupBinding() {
-        
         cryptoViewModel
             .loading
             .observe(on: MainScheduler.asyncInstance)

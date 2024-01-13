@@ -18,13 +18,11 @@ class CryptoViewModel {
     
     // MARK: requestData()
     func requestData() {
-        self.loading.onNext(true)
         guard let url = URL(string:"https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json") else{
             print("Fetch Error")
             return
         }
         Webservice().downloadCurrencies(url: url) { result in
-            self.loading.onNext(false)
             switch result {
             case .success(let cryptos):
                 self.crypto.onNext(cryptos)
